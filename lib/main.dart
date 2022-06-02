@@ -1,9 +1,8 @@
-import 'package:api_aproach/approach_two_with_mvvm_provider/view/homepage_provider_approach.dart';
+import 'package:api_aproach/approach_three_complex_json_getx/pages/third_approach.dart';
 import 'package:api_aproach/approach_two_with_mvvm_provider/view_model/user_view_model.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:provider/provider.dart';
-
-import 'approach_one_with_getx/view/home_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -17,12 +16,12 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return ChangeNotifierProvider(
       create: ((context) => UserViewModel()),
-      child: MaterialApp(
+      child: GetMaterialApp(
         title: 'Flutter Demo',
         theme: ThemeData(
           primarySwatch: Colors.blue,
         ),
-        home: const HomepageProviderApproach(),
+        home: const ThirdApproach(),
       ),
     );
   }
